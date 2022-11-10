@@ -1,0 +1,238 @@
+<html lang="en">
+    <head>
+        <link rel="shortcut icon" href="https://cws.auckland.ac.nz/gas/api/FavIcon"/>
+        <title>Game Academy</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="hwen554.css"/>
+        
+    </head>
+    <body onload="loading()">
+        <div class="header">
+            <div class="heading">
+                <!-- NAVIGATION -->
+                <div class="nav-links">
+                    <img id="logo" src="https://cws.auckland.ac.nz/gas/api/Logo" width="90" height="90" />
+                    <div class="title">Game Academy</div>
+                    <a onclick="home()" href="#">Home</a>
+                    <a class="center" onclick="login()" href="#">Login</a>
+                    <a class="upward" onclick="game()" href="#">Game of Chess</a>
+                    <a class="forward" onclick="shop()" href="#">Academy Shop</a>
+                    <a class="forward" onclick="register()" href="#">Register</a>
+                    <a class="forward" onclick="book()" href="#">Guest Book</a>
+                </div>
+            </div>
+        </div>
+        <div class="center-block" id="loginstatus"></div>
+        <!-- HOME PAGE -->
+        <section id="home">
+            <img id="pic" src="https://cws.auckland.ac.nz/gas/images/Nb.svg" width="140" height="200" />
+            <h1 id="greeting">Welcome to Game Academy</h1> 
+            <h3 id="greeting"><i>premiere establishment providing world-class game resources.</i></h3>
+            <p id="greeting">Our shop have top-quality game items sourced from chess shop.
+                <br>
+            <hr>
+            <p id="greeting">Keeping in mind the safety of you and our staff, we only operate online.</p>
+            </p>
+            <footer id="version"/>
+        </section>
+
+        <section id="login">
+            <h1 id="greeting">Login</h1>
+            <div class="greeting" id="loginstatus"></div>
+            <br>
+            <p id="greeting">Please enter your details below to <strong>sign in</strong> and play online!</p>
+            <label class="greeting"for="username" id="label">Username:</label>
+                <!-- <br> -->
+            <input class="center-block"type="text" id="userNameLogin" placeholder="username"> 
+            <br>
+            <br>
+            <label class="greeting"for="password" id="label">Password:</label>
+                <!-- <br> -->
+            <input class="center-block"type="password" id="passwordLogin" placeholder="password"> 
+            <br>
+            <br>
+            <button class="center-block" type="submit" id="logon" onclick="Login()">Sign In</button>
+            
+            <br>
+            <div class="greeting" id="loginfeedback"></div>
+        </section>
+
+        <section id="game">
+            <h2 class="greeting">Chess Game</h2>
+            <h3 class="greeting">Be Legend!</h3>
+            <hr>
+            <div  id="chess">
+                <ul>
+                    <li class="br"></li>
+                    <li class="br chess">a</li>
+                    <li class="br chess">b</li>
+                    <li class="br chess">c</li>
+                    <li class="br chess">d</li>
+                    <li class="br chess">e</li>
+                    <li class="br chess">f</li>
+                    <li class="br chess">g</li>
+                    <li class="br chess">h</li>
+                    <li class="br" ondrop="trash(event)" ondragover="done(event)"><img src="https://cws.auckland.ac.nz/gas/images/Bin.svg"></li>
+                    
+                </ul>
+                
+                <ul>
+                    <li class="br chess">8</li>
+                    <li class="br-w chess"><img ondragstart="move(event)" id="a8" src="https://cws.auckland.ac.nz/gas/images/Rb.svg"></li>
+                    <li class="br-b chess"><img ondragstart="move(event)" id="b8" src="https://cws.auckland.ac.nz/gas/images/Nb.svg"></li>
+                    <li class="br-w chess"><img ondragstart="move(event)" id="c8" src="https://cws.auckland.ac.nz/gas/images/Bb.svg"></li>
+                    <li class="br-b chess"><img ondragstart="move(event)" id="d8" src="https://cws.auckland.ac.nz/gas/images/Qb.svg"></li>
+                    <li class="br-w chess"><img ondragstart="move(event)" id="e8" src="https://cws.auckland.ac.nz/gas/images/Kb.svg"></li>
+                    <li class="br-b chess"><img ondragstart="move(event)" id="f8" src="https://cws.auckland.ac.nz/gas/images/Bb.svg"></li>
+                    <li class="br-w chess"><img ondragstart="move(event)" id="g8" src="https://cws.auckland.ac.nz/gas/images/Nb.svg"></li>
+                    <li class="br-b chess"><img ondragstart="move(event)" id="h8" src="https://cws.auckland.ac.nz/gas/images/Rb.svg"></li>
+                    <li class="br"><img ondragstart="move(event)" id="i8" src="https://cws.auckland.ac.nz/gas/images/kb.svg"></li>
+                </ul>
+                <ul>
+                    <li class="br chess">7</li>
+                    <li class="br-b chess"><img ondragstart="move(event)" id="a7" src="https://cws.auckland.ac.nz/gas/images/Pb.svg"></li>
+                    <li class="br-w chess"><img ondragstart="move(event)" id="b7" src="https://cws.auckland.ac.nz/gas/images/Pb.svg"></li>
+                    <li class="br-b chess"><img ondragstart="move(event)" id="c7" src="https://cws.auckland.ac.nz/gas/images/Pb.svg"></li>
+                    <li class="br-w chess"><img ondragstart="move(event)" id="d7" src="https://cws.auckland.ac.nz/gas/images/Pb.svg"></li>
+                    <li class="br-b chess"><img ondragstart="move(event)" id="e7" src="https://cws.auckland.ac.nz/gas/images/Pb.svg"></li>
+                    <li class="br-w chess"><img ondragstart="move(event)" id="f7" src="https://cws.auckland.ac.nz/gas/images/Pb.svg"></li>
+                    <li class="br-b chess"><img ondragstart="move(event)" id="g7" src="https://cws.auckland.ac.nz/gas/images/Pb.svg"></li>
+                    <li class="br-w chess"><img ondragstart="move(event)" id="h7" src="https://cws.auckland.ac.nz/gas/images/Pb.svg"></li>
+                    <li class="br"><img ondragstart="move(event)" id="i7" src="https://cws.auckland.ac.nz/gas/images/kb.svg"></li>
+                </ul>
+                <ul>
+                    <li class="br chess">6</li>
+                    <li class="br-w chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br-b chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br-w chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br-b chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br-w chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br-b chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br-w chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br-b chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br"><img ondragstart="move(event)" id="i6" src="https://cws.auckland.ac.nz/gas/images/kb.svg"></li>
+                </ul>
+                <ul>
+                    <li class="br chess">5</li>
+                    <li class="br-b chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br-w chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br-b chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br-w chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br-b chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br-w chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br-b chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br-w chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br"><img ondragstart="move(event)" id="i5"src="https://cws.auckland.ac.nz/gas/images/kb.svg"></li>
+                </ul>
+                <ul>
+                    <li class="br chess">4</li>
+                    <li class="br-w chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br-b chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br-w chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br-b chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br-w chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br-b chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br-w chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br-b chess"ondrop="settledown(event)" ondragover="done(event)"></li>
+                    <li class="br"><img ondragstart="move(event)" id="i4" src="https://cws.auckland.ac.nz/gas/images/kw.svg"></li>
+                </ul>
+                <ul>
+                    <li class="br chess">3</li>
+                    <li class="br-b chess"ondrop="settledown(event)"ondragover="done(event)"></li>
+                    <li class="br-w chess"ondrop="settledown(event)"ondragover="done(event)"></li>
+                    <li class="br-b chess"ondrop="settledown(event)"ondragover="done(event)"></li>
+                    <li class="br-w chess"ondrop="settledown(event)"ondragover="done(event)"></li>
+                    <li class="br-b chess"ondrop="settledown(event)"ondragover="done(event)"></li>
+                    <li class="br-w chess"ondrop="settledown(event)"ondragover="done(event)"></li>
+                    <li class="br-b chess"ondrop="settledown(event)"ondragover="done(event)"></li>
+                    <li class="br-w chess"ondrop="settledown(event)"ondragover="done(event)"></li>
+                    <li class="br"><img ondragstart="move(event)" id="i3" src="https://cws.auckland.ac.nz/gas/images/kw.svg"></li>
+                </ul>
+                <ul>
+                    <li class="br chess">2</li>
+                    <li class="br-w chess"><img ondragstart="move(event)" id="a2" src="https://cws.auckland.ac.nz/gas/images/Pw.svg"></li>
+                    <li class="br-b chess"><img ondragstart="move(event)" id="b2" src="https://cws.auckland.ac.nz/gas/images/Pw.svg"></li>
+                    <li class="br-w chess"><img ondragstart="move(event)" id="c2" src="https://cws.auckland.ac.nz/gas/images/Pw.svg"></li>
+                    <li class="br-b chess"><img ondragstart="move(event)" id="d2" src="https://cws.auckland.ac.nz/gas/images/Pw.svg"></li>
+                    <li class="br-w chess"><img ondragstart="move(event)" id="e2" src="https://cws.auckland.ac.nz/gas/images/Pw.svg"></li>
+                    <li class="br-b chess"><img ondragstart="move(event)" id="f2" src="https://cws.auckland.ac.nz/gas/images/Pw.svg"></li>
+                    <li class="br-w chess"><img ondragstart="move(event)" id="g2" src="https://cws.auckland.ac.nz/gas/images/Pw.svg"></li>
+                    <li class="br-b chess"><img ondragstart="move(event)" id="h2" src="https://cws.auckland.ac.nz/gas/images/Pw.svg"></li>
+                    <li class="br"><img ondragstart="move(event)" id="i2" src="https://cws.auckland.ac.nz/gas/images/kw.svg"></li>
+                </ul>
+                <ul>
+                    <li class="br chess">1</li>
+                    <li class="br-b chess"><img ondragstart="move(event)" id="a1" src="https://cws.auckland.ac.nz/gas/images/Rw.svg"></li>
+                    <li class="br-w chess"><img ondragstart="move(event)" id="b1" src="https://cws.auckland.ac.nz/gas/images/Nw.svg"></li>
+                    <li class="br-b chess"><img ondragstart="move(event)" id="c1" src="https://cws.auckland.ac.nz/gas/images/Bw.svg"></li>
+                    <li class="br-w chess"><img ondragstart="move(event)" id="d1"src="https://cws.auckland.ac.nz/gas/images/Qw.svg"></li>
+                    <li class="br-b chess"><img ondragstart="move(event)" id="e1" src="https://cws.auckland.ac.nz/gas/images/Kw.svg"></li>
+                    <li class="br-w chess"><img ondragstart="move(event)" id="f1" src="https://cws.auckland.ac.nz/gas/images/Bw.svg"></li>
+                    <li class="br-b chess"><img ondragstart="move(event)" id="g1" src="https://cws.auckland.ac.nz/gas/images/Nw.svg"></li>
+                    <li class="br-w chess"><img ondragstart="move(event)" id="h1" src="https://cws.auckland.ac.nz/gas/images/Rw.svg"></li>
+                    <li class="br"><img ondragstart="move(event)" id="i1" src="https://cws.auckland.ac.nz/gas/images/kw.svg"></li>
+                </ul>
+                <ul>
+                    <li class="br" ondrop="trash(event)" ondragover="done(event)"><img src="https://cws.auckland.ac.nz/gas/images/Bin.svg"></li>
+                    <li class="br chess">a</li>
+                    <li class="br chess">b</li>
+                    <li class="br chess">c</li>
+                    <li class="br chess">d</li>
+                    <li class="br chess">e</li>
+                    <li class="br chess">f</li>
+                    <li class="br chess">g</li>
+                    <li class="br chess">h</li>
+                    <li class="br"></li>
+                    
+                </ul>
+            </div>
+            <div  id="Feedback"></div>
+            <div class="chess" >
+                <button class="modal" onclick="sGame()" id="tryGame">Start</button>
+                <button class="modal2" onclick="PostMyMove()" id="SendMyMove" style="display: none">PostMyMove</button>
+                <button class="modal2" onclick="TheirMove()" id="GetTheirMove" style="display:none">TheirMove</button>
+                <button class="modal3" onclick="quit()" id="quit" style="display: none">Quit Game</button>
+            </div>
+        </section>
+
+        <section id="shop">
+            <h2 id="greeting">Game Shop</h2>
+            <div  id="fa" class="notification" style="display:none;"></div>
+            
+            <label class="greeting">Search Items</label>
+            <input class="center-block" id="searchInput" onkeypress="searchItem()"></input>
+            <table class="center-block" id="itemTable"></table>
+        </section>
+
+        <section id="register">
+            <h1 id="greeting">User Registration</h1>
+            <p id="greeting">Please enter your details below to <strong>sign up</strong></p>
+            <label class="greeting"for="newName" id="label">Name:</label>
+            <input class="center-block"type="text" id="newName" placeholder="Enter your name">  
+            <label class="greeting"for="newPassword" id="label">Password:</label>
+            <input class="center-block"type="text" id="newPassword" placeholder="Enter your password"> 
+            <label class="greeting" for="newAddress" id="label" >Address:</label>
+            <input class="center-block" type="text" id="newAddress" placeholder="Enter your address">
+            <button class="center-block"type="button"  onclick="signUp()">Sign up</button>
+            <div class="greeting" id="feedback"></div>
+        </section>
+
+        <section id="book">
+            <h1 id="greeting">Guest Book</h1>
+            <p id="greeting">Please write comment here</p>
+            <label class="greeting"for="comment" id="label">Comment:</label>
+            <input class="c"type="text" id="comment" placeholder="Write comments">  
+            <label class="greeting"for="newName" id="label">Name:</label>
+            <input class="center-block"type="text" id="name" placeholder="Enter your name">
+            <br>
+            <button type="submit" class="center-block" onclick="writeComment()">submit</button>
+            <br>
+            <h1 class="greeting">Recent Comments</h1>
+            <div class="greeting" id="showComments"></div>
+        </section>
+
+        
+        <script  type ="text/javascript" src="hwen554.js"></script> 
+    </body>
+</html>
