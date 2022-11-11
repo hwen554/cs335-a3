@@ -1,0 +1,42 @@
+html {
+    font-family: 'Helvetica', sans-serif;
+    background-color: rgb(252, 245, 253);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+body{
+    height: 100vh;
+    display:inline;
+    align-items:flex-start;
+    justify-content:center;
+    background: #484c4c;
+}
+.title{
+    margin-top: 15px;
+    padding-left: 1px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#logo{
+    padding-left: 15px;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 20px 15px ;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.home{
+    padding-left: 10px;
+    font-size: larger;
+}
