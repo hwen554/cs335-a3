@@ -276,10 +276,10 @@ const buyItem=(itemID)=>{
           
           document.getElementById("fa").innerHTML = `Thank for ${result['userName']} buying ${result['productID']}`+ 
           `<div id="mdiv">
-           <div onclick="close()" class="mdiv">
-            <div onclick="close()" class="md"></div>
-           </div>
-          </div>`;
+            <div onclick="close()" class="mdiv">
+             <div onclick="close()" class="md"></div>
+            </div>
+           </div>`;
           document.getElementById("fa").style.display = "block";
           auto();
       })
