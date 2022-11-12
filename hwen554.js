@@ -19,7 +19,7 @@ async function home() {
   tmp.innerHTML = "@All rights reserved " + noQuotes;
 }
 
-function login() {
+async function login() {
   document.getElementById("home").style.display = "none";
   document.getElementById("login").style.display = "block";
   document.getElementById("game").style.display = "none";
@@ -28,7 +28,7 @@ function login() {
   document.getElementById("book").style.display = "none";
   console.log("login");
 }
-function game() {
+async function game() {
   document.getElementById("home").style.display = "none";
   document.getElementById("login").style.display = "none";
   document.getElementById("game").style.display = "block";
@@ -37,7 +37,7 @@ function game() {
   document.getElementById("book").style.display = "none";
   console.log("game");
 }
-function shop() {
+async function shop() {
   document.getElementById("home").style.display = "none";
   document.getElementById("login").style.display = "none";
   document.getElementById("game").style.display = "none";
@@ -46,7 +46,7 @@ function shop() {
   document.getElementById("book").style.display = "none";
   console.log("shop");
 }
-function register() {
+async function register() {
   document.getElementById("home").style.display = "none";
   document.getElementById("login").style.display = "none";
   document.getElementById("game").style.display = "none";
@@ -56,7 +56,7 @@ function register() {
   console.log("register");
 }
 
-function book() {
+async function book() {
   document.getElementById("home").style.display = "none";
   document.getElementById("login").style.display = "none";
   document.getElementById("game").style.display = "none";
