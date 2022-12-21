@@ -408,6 +408,8 @@ const PostMyMove=()=>{
   }
 }
 const TheirMove=()=>{
+  /*to get rival's move using api with get method and gain return data. If data been returned shows 'no such game id' then what I did is to print exit game.Otherwise
+  update and display new move in the html*/
   fetch(`https://cws.auckland.ac.nz/gas/api/TheirMove?gameId=${gameID}`,{
     method:"GET",
     headers:{
