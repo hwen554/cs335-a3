@@ -380,12 +380,15 @@ const sGame=()=>{
 })
   }
 }
-let lastMove = "";
+let lastMove = ""; //Define a var to identify the state of movement, default value should be null.
 const PostMyMove=()=>{
+  // construct a combo of my movement,in case to get ready to post movement to database.
   let MyMove={
     "gameId":gameID,
     "move":document.getElementById("chess").innerHTML
   }
+  /* if lastmove still be null,then popup window to indicate , if I made move, then post it to database using api with POST method.
+  And get return data back and display alertion and update lastmove in html*/
   if(document.getElementById("chess").innerHTML===lastMove){
     alert("You havenot made move")
   }else{
